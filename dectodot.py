@@ -77,9 +77,10 @@ def checkValidIp( IPS ):
 
         
 def main():
-    listword = checkValidIp("123123543")
-    print(listword)
+    #listword = checkValidIp("123123454")
+    #print(listword)
     #checks output and calls function
+    pass
     
 main()
 #calls main
