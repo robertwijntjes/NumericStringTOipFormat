@@ -15,7 +15,9 @@ def checkValidIp( IPS ):
     p4 = IPS[9:12]
     p5=p3+p4
     p7 =[]
-    #print(strlength)
+    #Initialisation of Variables
+    
+    
     if p1 == p2:
         if(strlength == 12):
             for i,w in enumerate(IPS):
@@ -24,11 +26,15 @@ def checkValidIp( IPS ):
                 word = word + w
         
         if(strlength == 11):
-            p5 = p3[1:3] + p4      
+            p5 = p3[1:3] + p4    
+            #split one after because 1:111 cannot happen so should split it away
+            
             for i,w in enumerate(p5):
                 p7.append(p9 + p3[0:1] + p5[0:i+1] + "." + p5[i+1:(len(p5))])
+                #appends the 123.123 to the first digit to the changing position of the . and its surrounding numbers
                 if i > len(w) -1:
                     break
+                #stops the dot from going too far
             return (p7)
         
         if(strlength == 10):
@@ -67,13 +73,16 @@ def checkValidIp( IPS ):
     
     setword.append(word)
     return (setword)
+    #returns the word
 
         
 def main():
     listword = checkValidIp("123123543")
     print(listword)
+    #checks output and calls function
     
 main()
+#calls main
         
 
 
